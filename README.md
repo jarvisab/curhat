@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Curhat - Mini Project
 
-First, run the development server:
+Welcome to **Curhat**, a cozy corner in the web where you can share your thoughts and read others' musings. It's simple, it's random, you got the idea.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Live Demo : [curhat.links.here](https://curhat.links.here)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Table of Contents
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Introduction](#introduction)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [Features](#features)
 
-## Learn More
+- [Tech Stack](#tech-stack)
 
-To learn more about Next.js, take a look at the following resources:
+- [Getting Started](#getting-started)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Notes](#notes)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+  
 
-## Deploy on Vercel
+### Introduction
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Curhat** is an Indonesian term for sharing or venting out. This mini project serves as a platform to read and post messages randomly. It's a simple and straightforward project.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  
+
+### Features
+
+-  **Read Random Posts**: Dive into a pool of thoughts shared by others.
+
+-  **Post Your "Message"**: Share your own thoughts. Titles and creators are optional, but remember, it's public!
+
+  
+
+### Tech Stack
+
+-  **Frontend**: Next.js with TypeScript, styled with Tailwind CSS and Shadcn UI components.
+
+-  **Backend**: SQLite database managed by [Turso](https://turso.tech/) and [Drizzle ORM](https://orm.drizzle.team/).
+
+-  **Editor**: [Tiptap](https://tiptap.dev/product/editor) for the text editor.
+
+  
+
+### Getting Started
+
+To set up the project locally:
+
+  
+
+1. Clone the repository and install dependencies.
+
+2. Configure your env (using `.env.local` by default, change it in `drizzle.config.ts`) file (refer to `.env.example` for structure) with your Turso connection URL and auth token. For more details, visit [Turso Documentation](https://docs.turso.tech/sdk/ts/quickstart).
+
+3. Initialize the database with `npx drizzle-kit push`.
+
+4. Start the development server with `npm run dev` or build with `npm run build`.
+
+
+ 
+### Notes
+
+*  **Database**: Ensure the database is pre-populated with some data (It's doing this by default), as the app **(currently)** doesn't handle an empty database state.
