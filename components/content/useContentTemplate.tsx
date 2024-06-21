@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { getMessagesFromIDS, getMaxID } from "@/actions/get-messages";
 
-const COUNT_OF_DATA_TO_GET = 5;
+const COUNT_OF_DATA_TO_GET = 10;
 
 const useContentBoilerplate = () => {
     const [browsedMessages, setBrowsedMessages] = useState<any[]>([]);
@@ -50,8 +50,7 @@ const useContentBoilerplate = () => {
     const handleNext = () => {
         scrollToTop();
         setCurrentMessageIndex((prevIndex) => prevIndex + 1);
-
-        if ((browsedMessages.length - 1) === currentMessageIndex) {
+        if ((browsedMessages.length - 2) === currentMessageIndex) {
             getRandomDatas();
         }
     };
