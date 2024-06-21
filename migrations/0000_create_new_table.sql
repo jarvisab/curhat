@@ -6,7 +6,7 @@ CREATE TABLE `messages` (
 	`created_at` text DEFAULT (CURRENT_TIMESTAMP) NOT NULL
 );
 
-CREATE INDEX idx_messages_id ON messages(id);
+CREATE INDEX IF NOT EXISTS idx_messages_id ON messages(id);
 
 INSERT INTO messages (`message`) VALUES
 ("Message Template 1"),

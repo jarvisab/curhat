@@ -22,7 +22,7 @@ const AddContent: React.FC = () => {
   const { title: dialogTitle, description: dialogDescription } = submitDialog;
 
   return (
-    <form className="space-y-4 flex flex-col mb-8">
+    <div className="space-y-4 flex flex-col mb-8">
       <Label>
         {title_label}
         <Input
@@ -55,7 +55,7 @@ const AddContent: React.FC = () => {
           onConfirm={handleSubmit}
         />
       </AlertDialog>
-    </form>
+    </div>
   )
 }
 
