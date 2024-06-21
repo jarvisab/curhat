@@ -3,7 +3,7 @@
 
 Welcome to **Curhat**, a cozy corner in the web where you can share your thoughts and read others' musings. It's simple, it's random, you got the idea.
 
-## Live Demo : [curhat.links.here](https://curhat.links.here)
+## Live Demo : [curhat.pages.dev](https://curhat.pages.dev)
 
 ## Table of Contents
 
